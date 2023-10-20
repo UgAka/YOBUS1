@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STL - Add bus</title>
+        <link rel="stylesheet" href="StyleDashboard.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+     
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                <li>
+                        <a href="dashboard.html">
+                            <span class="Title"><h2>SIMBULA TUGENDE</h2></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="Icon"><i class="fas fa-home"></i></span>
+                            <span class="Title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="add-schedule.html">
+                            <span class="Icon"><i class="fas fa-plus-circle"></i></span>
+                            <span class="Title">Add Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="schedule.html">
+                            <span class="Icon"><i class="fas fa-eye"></i></span>
+                            <span class="Title">View Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="add-bus.html">
+                            <span class="Icon"><i class="fas fa-folder-plus"></i></span>
+                            <span class="Title">Add Bus</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bus.html">
+                            <span class="Icon"><i class="fas fa-bus"></i></span>
+                            <span class="Title">View Buses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="analytics.html">
+                            <span class="Icon"><i class="fas fa-barcode"></i></span>
+                            <span class="Title">View Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="report.html">
+                            <span class="Icon"><i class="far fa-file-chart-line"></i></span>
+                            <span class="Title">Report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="logout.html">
+                            <span class="Icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="Title">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main">
+                <div class="topbar">
+                    <div class="toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+                    <div class="search">
+                        <label>
+                        
+                        </label>
+                    </div>
+                    <div class="user">
+                        <img src="stlrrrr.png">
+                    </div>
+                </div><div class="row">
+    <div class="col-xs-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Monthly Reservations Report</h3>
+          <div class="box-tools pull-right">
+            <form class="form-inline">
+              <div class="form-group">
+                <label>Select Year: </label>
+                <select class="form-control input-sm" id="select_year">
+                 
+                </select>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="box-body">
+          <div class="chart">
+            <br>
+            <div id="legend" class="text-center"></div>
+            <canvas id="barChart" style="height:350px"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section>
+  <!-- right col -->
+</div>
+ 
+</div>
+<!-- ./wrapper -->
+
+<!-- Chart Data -->
+<!-- <?php
+$months = array();
+$sales = array();
+for( $m = 1; $m <= 12; $m++ ) {
+try{
+  $stmt = $conn->prepare("SELECT * FROM details LEFT JOIN sales ON sales.id=details.sales_id LEFT JOIN products ON products.id=details.product_id WHERE MONTH(sales_date)=:month AND YEAR(sales_date)=:year");
+  $stmt->execute(['month'=>$m, 'year'=>$year]);
+  $total = 0;
+  foreach($stmt as $srow){
+    $subtotal = $srow['price']*$srow['quantity'];
+    $total += $subtotal;    
+  }
+  array_push($sales, round($total, 2));
+}
+catch(PDOException $e){
+  echo $e->getMessage();
+}
+
+$num = str_pad( $m, 2, 0, STR_PAD_LEFT );
+$month =  date('M', mktime(0, 0, 0, $m, 1));
+array_push($months, $month);
+}
+
+$months = json_encode($months);
+$sales = json_encode($sales);
+
+?> -->
+<!-- End Chart Data -->
+
+<!-- <?php $pdo->close(); ?>
+<?php include 'includes/scripts.php'; ?> -->
+<script>
+$(function(){
+var barChartCanvas = $('#barChart').get(0).getContext('2d')
+var barChart = new Chart(barChartCanvas)
+var barChartData = {
+labels  : "",
+datasets: [
+  {
+    label               : 'SALES',
+    fillColor           : 'rgba(60,141,188,0.9)',
+    strokeColor         : 'rgba(60,141,188,0.8)',
+    pointColor          : '#3b8bba',
+    pointStrokeColor    : 'rgba(60,141,188,1)',
+    pointHighlightFill  : '#fff',
+    pointHighlightStroke: 'rgba(60,141,188,1)',
+    data                : ""
+  }
+]
+}
+//barChartData.datasets[1].fillColor   = '#00a65a'
+//barChartData.datasets[1].strokeColor = '#00a65a'
+//barChartData.datasets[1].pointColor  = '#00a65a'
+var barChartOptions                  = {
+//Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+scaleBeginAtZero        : true,
+//Boolean - Whether grid lines are shown across the chart
+scaleShowGridLines      : true,
+//String - Colour of the grid lines
+scaleGridLineColor      : 'rgba(0,0,0,.05)',
+//Number - Width of the grid lines
+scaleGridLineWidth      : 1,
+//Boolean - Whether to show horizontal lines (except X axis)
+scaleShowHorizontalLines: true,
+//Boolean - Whether to show vertical lines (except Y axis)
+scaleShowVerticalLines  : true,
+//Boolean - If there is a stroke on each bar
+barShowStroke           : true,
+//Number - Pixel width of the bar stroke
+barStrokeWidth          : 2,
+//Number - Spacing between each of the X value sets
+barValueSpacing         : 5,
+//Number - Spacing between data sets within X values
+barDatasetSpacing       : 1,
+//String - A legend template
+legendTemplate          : '<ul class="<%=name.toLowerCase()%>-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].fillColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>',
+//Boolean - whether to make the chart responsive
+responsive              : true,
+maintainAspectRatio     : true
+}
+
+barChartOptions.datasetFill = false
+var myChart = barChart.Bar(barChartData, barChartOptions)
+document.getElementById('legend').innerHTML = myChart.generateLegend();
+});
+</script>
+<script>
+$(function(){
+$('#select_year').change(function(){
+window.location.href = 'home.php?year='+$(this).val();
+});
+});
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+        function info(){
+            var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            if( this.readyState == 4 && this.status == 200){
+                document.getElementById('TR').innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET","TR.php?Origin="+Origin+"&Destination="+Destination,true);
+        xmlhttp.send();
+        }
+
+</script>
+</body>
+</html>

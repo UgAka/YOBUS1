@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>STL schedule routes</title>
+        <link rel="stylesheet" href="StyleDashboard.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+    <body>
+            
+        <div class="container">
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                           
+                            <span class="Title"><h2>SIMBULA TUGENDE</h2></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="dashboard.html">
+                            <span class="Icon"><i class="fas fa-home"></i></span>
+                            <span class="Title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="add-schedule.html">
+                            <span class="Icon"><i class="fas fa-plus-circle"></i></span>
+                            <span class="Title">Add Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="schedule.html">
+                            <span class="Icon"><i class="fas fa-eye"></i></span>
+                            <span class="Title">View Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="add-bus.html">
+                            <span class="Icon"><i class="fas fa-folder-plus"></i></span>
+                            <span class="Title">Add Bus</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bus.html">
+                            <span class="Icon"><i class="fas fa-bus"></i></span>
+                            <span class="Title">View Buses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="analytics.html">
+                            <span class="Icon"><i class="fas fa-barcode"></i></span>
+                            <span class="Title">View Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="report.html">
+                            <span class="Icon"><i class="far fa-file-chart-line"></i></span>
+                            <span class="Title">Report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="logout.html">
+                            <span class="Icon"><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="Title">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main">
+                <div class="topbar">
+                    <div class="toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+                    <div class="search">
+                        <label>
+                   
+                        </label>
+                    </div>
+                    <div class="user">
+                        <img src="stlrrrr.png">
+                    </div>
+                </div>
+
+
+                <div class="detailsSchedule">
+                    <div class="recentSchedule">
+                        <div class="cardHeader">
+                            <h2>Recent Schedule</h2>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Origin</th>
+                                    <th>Destination</th>
+                                    <th>Departure</th>
+                                    <th>Arrival</th>
+                                    <th>Fare</th>
+                                    <th>Duration</th>
+                                    <th>Bus Operator</th>
+                                    <th>Bus Type</th>
+                                    <th>Date</th>
+                                    <th>Operation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+                                <tr>
+                                    <td>Kampala</td>
+                                    <td>Mbarara</td>
+                                    <td>08:00am</td>
+                                    <td>12:00pm</td>
+                                    <td>Ush 45000</td>
+                                    <td>4h</td>
+                                    <td>Jaguar</td>
+                                    <td>Large</td>
+                                    <td>12/08/2023</td>
+                                    <td><a href="" data-toggle="tooltip" data-placement="buttom" title="DELETE"></title></data-toggle><i class="fas fa-trash" style="text-align-last: center;"></i></a></td>
+                                    <td><a href="" data-toggle="tooltip" data-placement="buttom" title="EDIT"></title></data-toggle><i class="fas fa-edit" style="text-align-last: center;"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Kampala</td>
+                                    <td>Mbarara</td>
+                                    <td>09:00am</td>
+                                    <td>01:00pm</td>
+                                    <td>Ush 30000</td>
+                                    <td>4h</td>
+                                    <td>Global</td>
+                                    <td>Small</td>
+                                    <td>12/08/2023</td>
+                                    <td><a href="" data-toggle="tooltip" data-placement="buttom" title="DELETE"></title></data-toggle><i class="fas fa-trash" style="text-align-last: center;"></i></a></td>
+                                    <td><a href="" data-toggle="tooltip" data-placement="buttom" title="EDIT"></title></data-toggle><i class="fas fa-edit" style="text-align-last: center;"></i></a></td>
+                                </tr>
+
+                         
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+            main.classList.toggle('active')
+        }
+    </script>
+
+    </body>
+</html>
