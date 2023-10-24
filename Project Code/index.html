@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login and Registration Form</title>
+	<title>YOBUS</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="HandheldFriendly" content="true">
@@ -12,7 +12,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
- 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 
@@ -21,7 +21,29 @@
 <body class="h" style="background-color: aliceblue;">
 	
 	<section class="whole">
-		<nav > <br>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light py-2 sticky-top">
+			<div class="container-fluid py-2">
+			  <a class="navbar-brand" href="#"><img src="YOBUSLOGO.png"  class="brand-image"></a>
+			  <div class="nav-link" id="menu">
+				<i class="fas fa-times" onclick="hidemenu()" style="margin-left: 10px; margin-top: 6px;"></i>
+				<ul style="color: black;">
+				   <li><a href="Home.php" style="color: black;">HOME</a></li>
+				   <li><a href="About.php"style="color: black;">ABOUT</a></li>
+				   <li><a href="LOGIN-FORM.HTML"style="color: black;">BOOK NOW</a></li>
+				   <li><a href="Contact.php"style="color: black;">CONTACT</a></li>
+				  
+				   
+				</ul>
+			 </div>
+			 <div class="login-button nav-link" id="menu">
+				<ul style="color: black;">
+					
+					<li><a href="LOGIN-FORM.HTML"style="color: black;">LOGIN</a></li>
+					
+				 </ul>
+			</div>
+		  </nav>
+			<!-- <div class="brand"><img src="bus-logo.svg" alt="" srcset="" class="brand-image"></div>
 		    <div class="nav-link" id="menu">
 			   <i class="fas fa-times" onclick="hidemenu()" style="margin-left: 10px; margin-top: 6px;"></i>
 			   <ul style="color: black;">
@@ -29,14 +51,16 @@
 				  <li><a href="About.php"style="color: black;">ABOUT</a></li>
 				  <li><a href="LOGIN-FORM.HTML"style="color: black;">BOOK NOW</a></li>
 				  <li><a href="Contact.php"style="color: black;">CONTACT</a></li>
-				  <li><a href="LOGIN-FORM.HTML"style="color: black;">LOGIN</a></li>
+				 
 				  
 			   </ul>
 		    </div>
-		    <i class="fas fa-bars" onclick="showmenu()"></i>
-		</nav>
+			
+			</div>
+		    <i class="fas fa-bars" onclick="showmenu()"></i> -->
+		</div>
 		<section class="cta " style="width: 100vw;">
-			<h1 style="font-size: 100px;">Simbula Tugende</h1>
+			<h1 style="font-size: 100px;">YoBus</h1>
 				<p style="color: aliceblue;">The Revolutionary Bus Management System<br>in Uganda</p>
 			<a href="LOGIN-FORM.HTML" class="hero-btn">BOOK NOW</a>
 		 </section>
@@ -67,8 +91,39 @@
 		<h1 style="color: black;">Our Main Destinations</h1>
 		<p1>We Provide Our Best Services on the Following Routes</p1>
   
-		<div class="row">
-		    <div class="campus-col">
+		<div class="bus-routes"> 
+			<h3>Popular Destinations</h3>
+	
+			<div class="destination-content ">
+			  <div class="destination-card ">
+			  <div class="card-image kampala"></div>
+			  <div class="layer">
+				<h3>KAMPALA</h3>
+			 </div>
+			</div>
+			<div class="destination-card">
+			  <div class="card-image soroti"></div>
+			  <div class="layer">
+				<h3>SOROTI</h3>
+			 </div>
+			</div>
+			<div class="destination-card ">
+			  <div class="card-image mbale"></div>
+			  <div class="layer">
+				<h3>MBALE</h3>
+			 </div>
+			</div>
+			<div class="destination-card ">
+			  <div class="card-image arua"></div>
+			  <div class="layer">
+				<h3>ARUA</h3>
+			 </div>
+			</div>
+		  </div>
+	
+	
+		  </div>
+		    <!-- <div class="campus-col">
 			   <img src="Multan.jfif">
 			   <div class="layer">
 				  <h3>MBARARA</h3>
@@ -91,7 +146,7 @@
 			   <div class="layer">
 				  <h3>SOROTI</h3>
 			   </div>
-		    </div>
+		    </div> -->
 		</div>
 	 </section>
   
@@ -99,9 +154,62 @@
   
 	 <section class="testimonials">
 		<h1 style="color: black;">What Our Costumers Say!</h1>
-		<p1>Here are Some of the Reviews from Our Few Loyal Costumers</p1>
+		<p1 class="py-2">Here are Some of the Reviews from Our Few Loyal Costumers</p1>
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<div class="image one"></div>
+				<div>
+					<p>One of the Best Experience I have had in a while. Extremely Satisfied by the Luxury bus and the Refreshment service.</p>
+					<h4>Saul Mwegyesa</h4>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="far fa-star"></i>
+				 </div>
+			  </div>
+			  <div class="carousel-item">
+				<div class="image two"></div>
+				<div>
+					<p> Bus service was excellent. Customer service was great. Buses were clean and comfy. Free hot beverages were very good as well. Really enjoyed their great service.</p>
+					<h4>Julius Sendi</h4>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star-half-alt"></i>
+				 </div>
+			  </div>
+			  <div class="carousel-item">
+				<div class="image three"></div>
+				<div>
+					<p class=""> Bus service was excellent. Customer service was great. Buses were clean and comfy. Free hot beverages were very good as well. Really enjoyed their great service.</p>
+					<h4>Julius Sendi</h4>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star-half-alt"></i>
+				 </div>
+			  </div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="visually-hidden">Next</span>
+			</button>
+		  </div>
   
-		<div class="row">
+		<!-- <div class="row">
 		    <div class="test-col">
 			   <img src="user1.jpg">
 			   <div>
@@ -126,20 +234,20 @@
 				  <i class="fas fa-star-half-alt"></i>
 			   </div>
 		    </div>
-		</div>
+		</div> -->
 	 </section>
   
   <!-------- Call to Action -------->
   
 	 <section class="cta">
-		<h1>Booking Has Never Been Easy<br>. Book with STL</h1>
+		<h1>Booking Has Never Been Easy<br>. Book with YoBus</h1>
 		<a href="LOGIN-FORM.HTML" class="hero-btn">BOOK NOW</a>
 	 </section>
  
   <!-------- Javascript -------->
   <section class="footer">
 	<h5 style="color: black;">About Us</h5>
-	<p1>SIMBULA TUGENDE  provides transportation and logistics services all over Uganda <br>
+	<p1>YoBus provides transportation and logistics services all over Uganda <br>
 	    with a track record of outstanding comfort, security and responsibility, playing<br>
 	    a vital role in economic growth of our country.</p1>
 	<div class="icons">
@@ -148,7 +256,7 @@
 	    <i class="fab fa-instagram"></i>
 	    <i class="fab fa-linkedin-in"></i>
 	</div>
-	<p1>Made by STL</p1>
+	<p1>Made by YoBus</p1>
  </section>
   
   <script>
@@ -205,7 +313,8 @@
 	 }
 	 
   </script>
+
   
-	
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
