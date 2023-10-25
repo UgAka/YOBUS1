@@ -115,7 +115,7 @@
         xmlhttp.onreadystatechange = function(){
             if( this.readyState == 4 && this.status == 200){
                 alert(this.responseText);
-                location.href = "Booking.php";
+                location.href = "ticketdetails.php";
             }
         }
         xmlhttp.open("GET","Ticket.php?ScheduleId="+ScheduleId,true);

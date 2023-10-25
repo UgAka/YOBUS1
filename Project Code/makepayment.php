@@ -32,13 +32,16 @@
      <!-------- Contact -------->
 
      <section class="ticketdetails">
-          <div class="containert">
-               <h4 class="headingt">Payment Details</h4>
-               <div class="formtt">
+          <div class="container">
+               <h4 class="heading">Payment Details</h4>
+               <div class="form">
                     <div class="content">
                          <form action="enterticketdetails.php" method="post">
                               <label for="phone">Phone Number:<span>*</span></label>
                               <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+                              <label for="amount">Enter Amount:<span>*</span></label>
+                              <input type="text" id="phone" name="amount" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required />
+
 
                               <h5 class="fees-heading">Fees</h5>
                               <div class="fees">
