@@ -36,8 +36,8 @@
                 <p1>Our strong vision is to deliver excellence in services that exceeds the needs and expectation of our customers. Strive to become a market leader in the transportation industry of which others aspire to follow.</p1><br><br><br>
                 <a href="Home.php" class="hero-btn blue-btn">EXPLORE NOW</a>
             </div>
-            <div class="about-col">
-                <img src="vision.jpg">
+            <div class="about-col" style="background-image:url(vision.jpg);">
+                <!-- <img src="vision.jpg"> -->
             </div>
         </div>
     </section>
@@ -50,10 +50,11 @@
             <p1>We are committed towards the economic growth of our country by participating in the core infrastructure development. Providing a reliable and comfortable public transport service which people can look to as a viable and convenient transport alternative to any other transportation source. We will continually monitor the needs of the traveling public and review our service delivery on a regular basis in order to maintain people’s interest in our public transport service.</p1><br><br><br>
             <a href="Home.php" class="hero-btn blue-btn">EXPLORE NOW</a>
         </div>
-        <div class="about-col">
-            <img src="Mission.png">
-        </div>
-    </div>
+       
+        <div class="about-col" style="background-image:url(mission.png);">
+                <!-- <img src="vision.jpg"> -->
+            </div>
+   
 </section>
 
 <!-------- Content 3 -------->
@@ -61,12 +62,14 @@
     <div class="row">
         <div class="about-col">
             <h1>Company Profile</h1> <br>
-            <p1>WAINS Transport is pioneer in the business of Transportation in Pakistan. It has a protracted history; based on more than two decades of excellence in services. The founder members strong vision and dedication made it possible to launch WAINS Transport. The journey, which was started in 2009 under the banner of WAINS Transport with logistics business and then express bus service between Rawalpindi and Multan, which has been expanded to many folds. WAINS Transport serves as a hub of passenger transport throughout the length and breadth of Pakistan.</p1><br><br><br>
+            <p1>YoBus Transport is pioneer in the business of Transportation in Uganda. It has a protracted history; based on more than two decades of excellence in services. The founder members strong vision and dedication made it possible to launch YoBus Transport. YoBus Transport serves as a hub of passenger transport throughout the length and breadth of Uganda.</p1><br><br><br>
             <a href="Home.php" class="hero-btn blue-btn">EXPLORE NOW</a>
         </div>
-        <div class="about-col">
-            <img src="Profile.jfif">
-        </div>
+        
+        <div class="about-col" style="background-image:url(profile.jfif);">
+                <!-- <img src="vision.jpg"> -->
+            </div>
+       
     </div>
 </section>
 
