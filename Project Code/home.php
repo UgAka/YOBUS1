@@ -18,7 +18,7 @@
                     <li><a href="Home.php">HOME</a></li>
                     <li><a href="About.php">ABOUT</a></li>
                     <li><a href="MyReservation.php">MY RESERVATIONS</a></li>
-                    <li><a href="location.html">TRACK  LOCATION</a></li>
+                    <li><a href="location.php">TRACK  LOCATION</a></li>
                     <li><a href="Contact.php">CONTACT</a></li>
                     <li><a href="logout.php">LOGOUT</a></li>
                 </ul>
