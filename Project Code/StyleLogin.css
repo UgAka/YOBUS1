@@ -3,6 +3,7 @@
   padding: 0;
   font-family: sans-serif;
 }
+
 .login-sect {
   min-height: 100vh;
   width: 100%;
@@ -30,15 +31,17 @@
   overflow: hidden;
 }
 .button-box {
-  width: 220px;
+  width: fit-content;
   margin: 35px;
   position: relative;
+  display: flex;
   box-shadow: 0 0 20px 9px #2aadff63;
   border-radius: 30px;
+  height: 100px;
 }
 .toggle-btn {
   color: white;
-  padding: 10px 30px;
+  padding: 0px 30px;
   cursor: pointer;
   background: transparent;
   border: 0;
@@ -50,7 +53,7 @@
   left: 0;
   position: absolute;
   width: 110px;
-  height: 100%;
+  /* height: 100%; */
   background: #1990d8;
   border-radius: 30px;
   transition: 0.5s;
@@ -85,13 +88,20 @@
   border-color: white;
   border-radius: 30px;
 }
+.check-box,
+span {
+  display: inline-block;
+  margin: 0 auto;
+}
 .check-box {
-  margin: 30px 10px 30px 35px;
+  /* margin: 30px 10px 30px 35px; */
 }
 span {
   color: rgb(231, 229, 229);
   font-size: 12px;
-  bottom: 104px;
+  margin-top: 20px;
+  margin-left: 30px;
+  /* bottom: 104px; */
   position: absolute;
 }
 span1 {
