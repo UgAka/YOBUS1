@@ -647,6 +647,13 @@ img {
   padding-top: 70px;
   padding-bottom: 50px;
 }
+.booking-header{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
 h1 {
   font-size: 36px;
   font-weight: 800;
