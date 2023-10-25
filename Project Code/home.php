@@ -11,7 +11,7 @@
         }
     ?>
     <section class="header">
-        <nav> <br>
+        <nav class="booking-header"> <br>
             <div class="nav-link" id="menu">
                 <i class="fas fa-times" onclick="hidemenu()" style="margin-left: 10px; margin-top: 6px;"></i>
                 <ul>
@@ -30,7 +30,7 @@
         <section class="booking">
     <h1 style="color:white;">Select Route</h1>
     <p1 style="color:white;">Choose The Origin and Destination of your Route</p1>
-    <br><br>
+    <br>
     <div class="rowb">
         <div class="Origin">
             <select name="Origin" class="Dropdown" style="text-align-last: center; background-color: #d13636;" >
@@ -109,7 +109,7 @@
         }
         xmlhttp.open("GET","Search.php?Origin="+Origin+"&Destination="+Destination,true);
         xmlhttp.send();
-    }
+    } 
     function ReserveSeat(ScheduleId){
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function(){
